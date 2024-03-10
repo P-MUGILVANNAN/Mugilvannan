@@ -11,18 +11,32 @@
     />
   </head>
   <body>
-    <nav>
-      <div class="container nav-container">
-        <img src="Mugil.jpg" class="logo" />
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contacts">Contact</a></li>
-        </ul>
+    <!--Start navbar-->
+    <div class="container nav-container">
+      <img src="Mugil.jpg" class="logo" />
+      <div class="hoverdrop">
+        <img onclick="show_hide()" src="icons8-drop-down.gif" alt="" class="dropdown" />
+        <div id="list-items" class="nav-links">
+          <a href="#">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contacts">Contact</a>
+        </div>
       </div>
-    </nav>
+    </div>
+
+    <script>
+      //show and hide dropdown list item on button click
+      function show_hide() {
+         var click = document.getElementById("list-items");
+         if (click.style.display === "none") {
+            click.style.display = "flex";
+         } else {
+            click.style.display = "none";
+         }
+      }
+      </script>
     <!--End navbar-->
 
     <!--Start header-->
@@ -46,12 +60,14 @@
             </div>
           </h1>
           <h2 class="title">
-            <span class="title-word title-word-1">Front</span>
-            <span class="title-word title-word-2">End</span>
-            <span class="title-word title-word-3">Web</span>
+            <span class="title-word title-word-1">Full</span>
+            <span class="title-word title-word-2">Stack</span>
             <span class="title-word title-word-4">Developer</span>
           </h2>
-          <form target="_blank" action="https://drive.google.com/file/d/1AOdGDTpUyMjAMsxigFU_1SsLR0iSLf4u/view?usp=sharing">
+          <form
+            target="_blank"
+            action="https://drive.google.com/file/d/1lOERbCL77AvF8Pf94B7b1KD2ctZvV_Nz/view?usp=drive_link"
+          >
             <button class="btn">Download CV</button>
           </form>
         </div>
@@ -125,37 +141,91 @@
     </div>
     <!--End skills section-->
     <!--Start portfolio-->
-    <div class="portfolio-section">
+    <div class="portfolio-section" id="portfolio">
       <div class="portfolio-heading">
         <h3 class="animate-charcter">Portfolio</h3>
       </div>
       <div class="portfolio-images">
-          <div class="portfolio-images-hotstar">
-            <img src="hotstar-clone.png" alt="hotstar" class="hotstar-image">
-            <div class="description">
+        <div class="portfolio-images-hotstar">
+          <img src="hotstar-clone.png" alt="hotstar" class="hotstar-image" />
+          <div class="description">
             <h2>Hotstar-clone</h2>
             <p>This clone was created by using React.js,Html,Css,JavaScript</p>
-            <p>Github <a target="_blank" href="https://github.com/P-MUGILVANNAN/hotstar-clone.git" style="color: white; text-decoration: underline; text-decoration-color: rgb(167, 189, 196);">Link</a></p>
-            <p>Website Live <a target="_blank" href="https://hotstar-clone-62f80.web.app" style="color: white; text-decoration: underline; text-decoration-color: rgb(167, 189, 196);">Link</a></p>
-            </div>
-          </div>
-          <div class="portfolio-images-ecommerce">
-            <img src="e-commerce.png" alt="ecom" class="ecom-image">
-            <div class="description">
-                <h2>E-commerce</h2>
-                <p>This clone was created by using React.js,Html,Css,JavaScript,<br>MongoDb,Express.js</p>
-                <p>Github <a target="_blank" href="https://github.com/P-MUGILVANNAN/E-Commerce-website.git" style="color: white; text-decoration: underline; text-decoration-color: rgb(167, 189, 196);">Link</a></p>
-                <p>Website Live <a target="_blank" href="https://e-commerce-bcd00.web.app" style="color: white; text-decoration: underline; text-decoration-color: rgb(167, 189, 196);">Link</a></p>
-                </div>
-          </div>
-          <div class="portfolio-images-job-application">
-            <img src="Skill and Job.png" alt="" class="job-image"/>
-            <div class="description">
-                <h2>Skill/Job Recommender Application</h2>
-                <p>This project was created by using React.js,Html, <br>Css,JavaScript</p>
-                </div>
+            <p>
+              Github
+              <a
+                target="_blank"
+                href="https://github.com/P-MUGILVANNAN/hotstar-clone.git"
+                style="
+                  color: white;
+                  text-decoration: underline;
+                  text-decoration-color: rgb(167, 189, 196);
+                "
+                >Link</a
+              >
+            </p>
+            <p>
+              Website Live
+              <a
+                target="_blank"
+                href="https://hotstar-clone-62f80.web.app"
+                style="
+                  color: white;
+                  text-decoration: underline;
+                  text-decoration-color: rgb(167, 189, 196);
+                  
+                "
+                >Link</a
+              >
+            </p>
           </div>
         </div>
+        <div class="portfolio-images-ecommerce">
+          <img src="e-commerce.png" alt="ecom" class="ecom-image" />
+          <div class="description">
+            <h2>E-commerce</h2>
+            <p>
+              This clone was created by using React.js,Html,Css,JavaScript,<br />MongoDb,Express.js
+            </p>
+            <p>
+              Github
+              <a
+                target="_blank"
+                href="https://github.com/P-MUGILVANNAN/E-Commerce-website.git"
+                style="
+                  color: white;
+                  text-decoration: underline;
+                  text-decoration-color: rgb(167, 189, 196);
+                "
+                >Link</a
+              >
+            </p>
+            <p>
+              Website Live
+              <a
+                target="_blank"
+                href="https://e-commerce-bcd00.web.app"
+                style="
+                  color: white;
+                  text-decoration: underline;
+                  text-decoration-color: rgb(167, 189, 196);
+                "
+                >Link</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="portfolio-images-job-application">
+          <img src="Skill and Job.png" alt="" class="job-image" />
+          <div class="description">
+            <h2>Skill/Job Recommender Application</h2>
+            <p>
+              This project was created by using Python, Django,Html,
+              <br />Css,JavaScript
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!--End portfolio-->
@@ -168,8 +238,8 @@
       </div>
       <div class="cs1">
         <p>
-          <i class="fa fa-map-marker"></i> Mudiyanur village,
-          Tirukoilur taluk,Kallakkurichi dist,Tamil Nadu.
+          <i class="fa fa-map-marker"></i> Mudiyanur village, Tirukoilur
+          taluk,Kallakkurichi dist,Tamil Nadu.
         </p>
       </div>
       <div class="cs2">
